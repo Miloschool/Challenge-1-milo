@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
 
     <title>SpaceX Dashboard</title>
 </head>
+
 <body>
 
     <nav>
@@ -15,26 +17,25 @@
         <img src="images/SpaceX-Logo.svg" alt="" srcset="" id="nav_logo">
 
     </nav>
-    <container>
-       
-        <div class="container_item">
+    <div class="container">
+        
+        <div class="container-item">
             <h1>Speed</h1>
             <div class="inner-item">
-            <canvas id="chartSpeed"></canvas>
+                <canvas id="chartSpeed"></canvas>
+            </div>
         </div>
+
+        <div class="container-item">
+            <h1>Acceleration</h1>
+            <div class="inner-item">
+                <canvas id="chartAcceleration"></canvas>
+            </div>
+        </div>
+
     </div>
 
-    <!-- <div class="container_item">
-        <h1>Acceleration</h1>
-        <div class="inner-item">
-            <canvas id="chartAcceleration"></canvas>
-    </div> -->
-
-
-
-
-</container>
-  
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
