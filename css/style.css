@@ -77,7 +77,7 @@ h1 {
 }
 
 /* Tablet */
-@media screen and (min-width: 720px) and (max-width: 1023px) {
+@media screen and (min-width: 720px) and (max-width: 1024px) {
 
     .container {
         flex-direction: row;
@@ -93,17 +93,58 @@ h1 {
 }
 
 /* Monitor/laptop */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) and (max-width: 1919px){
+
+    .container {
+        flex-direction: row;
+    }
+
+    .container-item {
+        width: 320px;
+    }
+
+    .inner-item>p {
+        font-size: 30px;
+    }
+
+
+}
+
+/* Monitor/laptop 1280 > */
+@media screen and (min-width: 1280px) and (max-width: 1479px){
+
+
+    .container-item {
+        width: 350px;
+
+    }
+
+}
+
+/* Monitor/laptop 1480  > */
+@media screen and (min-width: 1480px) and (max-width: 1920px){
+
+    .container-item {
+        width: 470px;
+
+    }
+
+}
+
+
+
+/* Monitor/laptop 1920 >  */
+@media screen and (min-width: 1920px){
 
     .container {
         flex-direction: row;
         justify-content: space-around;
+    
      
     }
 
     .container-item {
-        width: 500px;
-
+        width: 550px;
     }
 
     .inner-item>p {

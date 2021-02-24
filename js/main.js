@@ -20,12 +20,12 @@ var chart = new Chart(ctx, {
   type: 'doughnut',
 
 
-
-
+ 
   // The data for our dataset
   data: {
 
     datasets: [{
+      label: 'Fuel',
       backgroundColor: [gradientStroke, '#939393'],
       borderColor: '#787878',
       borderWidth: '3',
