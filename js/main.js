@@ -131,12 +131,134 @@ var myChart = new Chart(ctxAcc, {
 });
 
 
+// Fuel
 
+var ticks = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0]; // custom ticks xAxes
 //  Fuel bar
 var ctxFuel = document.getElementById('chartFuel').getContext('2d');
 
 var myBarChart = new Chart(ctxFuel, {
-  type: 'bar',
-  data: data,
-  options: options
+  type: 'horizontalBar',
+  data: {
+    datasets: [{
+      backgroundColor: ['#45D720'],
+      label: 'Fuel',
+      data: [84]
+    }]
+  },
+
+
+  options: {
+    //Customizing xAxes
+    scales: {
+      xAxes: [{
+        ticks: {
+          fontColor: "#fff", // this here
+          autoSkip: false,
+          min: ticks[ticks.length - 1],
+          max: ticks[0]
+        },
+        afterBuildTicks: function (scale) {
+          scale.ticks = ticks;
+          return;
+        },
+        beforeUpdate: function (oScale) {
+          return;
+        },
+        gridLines: {
+          display: true,
+          zeroLineColor: '#3F4347',
+          zeroLineWidth: 2,
+
+        }
+      }]
+    }
+    //END customizing xAxes
+  }
+});
+
+
+
+// Distance
+
+var ctxDist = document.getElementById('chartDistance').getContext('2d');
+
+var myChartDistance = new Chart(ctxDist, {
+  type: 'line',
+
+  data: {
+
+    labels: ["0", "1", "2", "3", "4", "5", "6"],
+    datasets: [{
+
+      borderColor: '#58E5C4',
+      backgroundColor: '#58E5C4',
+      borderWidth: 4,
+
+
+  
+      fill: false,
+
+      data: [0, 5, 15, 32, 52, 74, 98]
+    }]
+  },
+  options: {
+
+    responsive: true,
+    tooltips: {
+      mode: 'index',
+      intersect: true
+    },
+
+
+    fullWidth: true,
+    annotation: {
+      annotations: [{
+        type: 'line',
+        mode: 'horizontal',
+      }]
+    },
+
+
+
+    // Custome gridlines
+
+
+    // customize Axes lines 
+    scales: {
+      xAxes: [{
+        gridLines: {
+          display: false,
+        },
+        ticks: {
+          fontColor: "#fff", // this here
+
+        },
+
+        gridLines: {
+          display: true,
+          zeroLineColor: '#fff',
+          zeroLineWidth: 2,
+
+        }
+      }],
+      yAxes: [{
+        display: true,
+        gridLines: {
+          display: true,
+        },
+        ticks: {
+          fontColor: "#fff", // this here
+        },
+
+        gridLines: {
+          display: true,
+          zeroLineColor: '#fff',
+          zeroLineWidth: 2,
+
+        }
+      }],
+    }
+
+  }
 });

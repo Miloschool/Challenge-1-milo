@@ -30,6 +30,8 @@ nav{
 .container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-around;
     /* border: 3px solid orange; */
  
 
@@ -59,3 +61,43 @@ h1{
 
 
 
+
+/* Food & water */
+
+.inner-item > p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+
+}
+
+
+/* Breakpoints */
+
+/* Tablet */
+@media screen and (min-width: 720px ){
+    
+    .container {
+        flex-direction: row;
+        
+    }
+
+    .container-item{
+        width: 300px;
+    }
+}
+
+
+@media screen and (min-width: 1025px ){
+    
+    .container {
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+
+    .container-item{
+        width: 350px;
+    }
+}
